@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homeable - Premium Home Decor Ecommerce</title>
+<meta name="description" content="Premium ecommerce destination for modern home decor, furniture, lighting, textiles, and accessories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<div id="site-header"></div>
+
+<section class="hero hero-premium" id="heroSlider">
+  <button class="hero-arrow hero-prev" type="button" aria-label="Previous slide"><i class="bi bi-chevron-left"></i></button>
+  <button class="hero-arrow hero-next" type="button" aria-label="Next slide"><i class="bi bi-chevron-right"></i></button>
+
+  <div class="hero-slide active" style="--hero-img:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1800&auto=format&fit=crop');">
+    <div class="container-xl">
+      <div class="hero-copy">
+        <span class="eyebrow">Homeable Theme</span>
+        <h1>Visual Ecommerce for Beautiful Homes</h1>
+        <p>Premium decor, furniture, lighting, and accents presented with a refined shopping experience inspired by high-end commerce design.</p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn btn-primary">Shop Now</a>
+          <a href="shop.html?filter=featured" class="btn btn-outline-light">Explore Demos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-slide" style="--hero-img:url('https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=1800&auto=format&fit=crop');">
+    <div class="container-xl">
+      <div class="hero-copy">
+        <span class="eyebrow">Curated Interiors</span>
+        <h1>Luxury Decor Built for Modern Living</h1>
+        <p>Discover sculptural lighting, soft textiles, organic ceramics, and furniture that makes every room feel considered.</p>
+        <div class="hero-actions">
+          <a href="new-arrivals.html" class="btn btn-primary">New Arrivals</a>
+          <a href="shop.html?filter=bestseller" class="btn btn-outline-light">Best Sellers</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-showcase">
+    <article class="floating-card floating-card-dark">
+      <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=520&auto=format&fit=crop" alt="Jewelry inspired product preview" loading="lazy">
+      <div>
+        <span>Decor Studio</span>
+        <strong>Elegant room accents</strong>
+      </div>
+    </article>
+
+    <article class="floating-card floating-card-wide">
+      <span class="showcase-title">Featured Products</span>
+      <div class="mini-products">
+        <div><img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=260&auto=format&fit=crop" alt="" loading="lazy"><span>Nora Oak Table</span></div>
+        <div><img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=260&auto=format&fit=crop" alt="" loading="lazy"><span>Bergen Lamp</span></div>
+        <div><img src="https://images.unsplash.com/photo-1578500494198-246f612d3b3d?q=80&w=260&auto=format&fit=crop" alt="" loading="lazy"><span>Stoneware Vase</span></div>
+        <div><img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=260&auto=format&fit=crop" alt="" loading="lazy"><span>Linen Chair</span></div>
+      </div>
+    </article>
+
+    <article class="floating-card floating-product-card">
+      <span class="product-tag sale">Sale</span>
+      <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=420&auto=format&fit=crop" alt="Linen Lounge Armchair" loading="lazy">
+      <h3>Linen Lounge Armchair</h3>
+      <p>Soft boucle texture with oak legs.</p>
+      <div class="floating-price"><del>$560.00</del><strong>$480.00</strong></div>
+    </article>
+  </div>
+</section>
+
+<section class="section section-after-hero">
+  <div class="container-xl">
+    <div class="section-heading center">
+      <span class="eyebrow">Shop by Room</span>
+      <h2>Featured Categories</h2>
+      <p>Every category is curated around a simple promise: fewer, better things for a more beautiful home.</p>
+    </div>
+    <div class="categories-grid" id="categoriesGrid">
+      <div class="spinner-luxe"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm bg-surface">
+  <div class="container-xl">
+    <div class="section-heading">
+      <span class="eyebrow">Editor's Picks</span>
+      <h2>Featured Products</h2>
+    </div>
+    <div class="products-grid" id="featuredGrid">
+      <div class="spinner-luxe"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container-xl">
+    <div class="section-heading">
+      <span class="eyebrow">Loved by customers</span>
+      <h2>Best Sellers</h2>
+    </div>
+    <div class="products-grid" id="bestSellersGrid">
+      <div class="spinner-luxe"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm bg-surface">
+  <div class="container-xl">
+    <div class="section-heading">
+      <span class="eyebrow">Just Landed</span>
+      <h2>New Arrivals</h2>
+    </div>
+    <div class="products-grid" id="newArrivalsGrid">
+      <div class="spinner-luxe"></div>
+    </div>
+  </div>
+</section>
+
+<section class="promo-band">
+  <div class="container-xl">
+    <div class="promo-panel reveal">
+      <div>
+        <span class="eyebrow">Limited Time</span>
+        <h2>Take 10% off your first order</h2>
+        <p>Use code <strong>WELCOME10</strong> at checkout and refresh your favorite room with something timeless.</p>
+      </div>
+      <a href="shop.html" class="btn btn-primary">Start Shopping</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container-xl">
+    <div class="section-heading center">
+      <span class="eyebrow">Testimonials</span>
+      <h2>What Customers Say</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Every piece feels like it was selected by a designer. My living room finally feels finished."</p>
+          <div class="testimonial-person">
+            <img src="https://i.pravatar.cc/80?img=32" alt="Ayesha K." loading="lazy">
+            <div><div class="name">Ayesha K.</div><div class="role">Lahore, Pakistan</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"The lamp is even more beautiful in person. Packaging was thoughtful and delivery was quick."</p>
+          <div class="testimonial-person">
+            <img src="https://i.pravatar.cc/80?img=15" alt="Bilal A." loading="lazy">
+            <div><div class="name">Bilal A.</div><div class="role">Islamabad, Pakistan</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Premium without feeling loud. Every guest asks where the chair and vases are from."</p>
+          <div class="testimonial-person">
+            <img src="https://i.pravatar.cc/80?img=48" alt="Sara M." loading="lazy">
+            <div><div class="name">Sara M.</div><div class="role">Karachi, Pakistan</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brand-strip">
+  <div class="container-xl">
+    <span>Nord Studio</span>
+    <span>Maison Line</span>
+    <span>Oak & Linen</span>
+    <span>Forma Home</span>
+    <span>Stone Craft</span>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container-xl">
+    <div class="newsletter-section reveal">
+      <span class="eyebrow">Stay in the loop</span>
+      <h2>Join the Homeable list</h2>
+      <p>New arrivals, seasonal edits, and private offers. No spam, unsubscribe anytime.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/partials.js"></script>
+<script src="js/main.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

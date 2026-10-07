@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — Homeable</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+
+<div id="site-header"></div>
+
+<div class="container-xl" style="padding-top:24px;">
+  <div class="breadcrumb-luxe"><a href="/index.html">Home</a> / <a href="/shop.html">Shop</a> / <span id="pdCategory"></span></div>
+</div>
+
+<div class="container-xl section-sm" id="pdContent">
+  <div class="row g-5">
+    <!-- GALLERY -->
+    <div class="col-lg-6">
+      <div class="pd-gallery-main"><img id="pdMainImage" src="" alt=""></div>
+      <div class="pd-thumbs" id="pdThumbs"></div>
+    </div>
+
+    <!-- DETAILS -->
+    <div class="col-lg-6">
+      <h1 id="pdName" style="font-size:32px;"></h1>
+      <div class="d-flex align-items-center gap-2 mb-2">
+        <span id="pdStars" style="color:#D9A441;"></span>
+        <span id="pdReviewCount" class="text-muted" style="font-size:13px;"></span>
+      </div>
+      <p id="pdShortDesc" class="text-muted"></p>
+      <div class="pd-price" id="pdPrice"></div>
+      <p id="pdAvailability" style="font-size:14px;"></p>
+
+      <div class="d-flex align-items-center gap-3 my-4">
+        <div class="qty-selector">
+          <button type="button" id="qtyMinus">−</button>
+          <input type="number" id="pdQty" value="1" min="1">
+          <button type="button" id="qtyPlus">+</button>
+        </div>
+        <button class="btn btn-dark" id="pdAddToCart"><i class="bi bi-bag"></i> Add to Cart</button>
+        <button class="btn-icon" id="pdWishlist" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
+      </div>
+      <button class="btn btn-primary btn-block mb-4" id="pdBuyNow">Buy Now</button>
+
+      <p class="text-muted" style="font-size:13px;">SKU: <span id="pdSku"></span></p>
+
+      <!-- TABS -->
+      <ul class="nav pd-tabs mt-4" id="pdTab" role="tablist">
+        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-desc" type="button">Description</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-specs" type="button">Specifications</button></li>
+        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-reviews" type="button">Reviews</button></li>
+      </ul>
+      <div class="tab-content pt-4">
+        <div class="tab-pane fade show active" id="tab-desc"><p id="pdDescription" class="text-muted"></p></div>
+        <div class="tab-pane fade" id="tab-specs"><ul id="pdSpecs" class="text-muted"></ul></div>
+        <div class="tab-pane fade" id="tab-reviews">
+          <div id="reviewsList" class="mb-4"></div>
+          <h6>Write a Review</h6>
+          <form id="reviewForm" class="form-luxe">
+            <div class="mb-3">
+              <label>Rating</label><br>
+              <div class="btn-group" role="group">
+                <input type="radio" class="btn-check" name="reviewRating" id="r5" value="5" checked><label class="btn btn-outline btn-sm" for="r5">5★</label>
+                <input type="radio" class="btn-check" name="reviewRating" id="r4" value="4"><label class="btn btn-outline btn-sm" for="r4">4★</label>
+                <input type="radio" class="btn-check" name="reviewRating" id="r3" value="3"><label class="btn btn-outline btn-sm" for="r3">3★</label>
+                <input type="radio" class="btn-check" name="reviewRating" id="r2" value="2"><label class="btn btn-outline btn-sm" for="r2">2★</label>
+                <input type="radio" class="btn-check" name="reviewRating" id="r1" value="1"><label class="btn btn-outline btn-sm" for="r1">1★</label>
+              </div>
+            </div>
+            <div class="mb-3"><label>Title</label><input type="text" id="reviewTitle" class="form-control"></div>
+            <div class="mb-3"><label>Comment</label><textarea id="reviewComment" class="form-control" rows="3"></textarea></div>
+            <button class="btn btn-dark" type="submit">Submit Review</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RELATED PRODUCTS -->
+<section class="section" style="background:var(--color-surface);">
+  <div class="container-xl">
+    <div class="section-heading center">
+      <span class="eyebrow">You May Also Like</span>
+      <h2>Related Products</h2>
+    </div>
+    <div class="products-grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/api.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/partials.js"></script>
+<script src="js/main.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/product-details.js"></script>
+</body>
+</html>
